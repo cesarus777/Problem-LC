@@ -1,4 +1,5 @@
 #pragma once
+#include "DDLst.h"
 
 //hash table
 struct hash_table_t {
