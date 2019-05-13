@@ -8,7 +8,7 @@ struct hash_table_t {
 };
 
 //creation hash table
-struct hash_table_t create_hash_table(int capacity);
+struct hash_table_t *create_hash_table(int capacity);
 
 //find elem in table
 struct node_t *find_elem(int index);
