@@ -26,14 +26,12 @@ struct node_t *add_elem(struct node_t *elem, struct hash_table_t *table)
   return elem;
 }
 
-struct node_t *find_elem(struct node_t *elem, struct hash_table_t *table)
+struct node_t *find_elem(int index, struct hash_table_t *table)
 {
   if((elem == NULL) || (table == NULL))
     return NULL;
-  int elem_hash = find_hash(elem->data.index);
-  if(table->elems[elem_hash] == elem)
-    return table->elems[elem_hash];
-  return NULL;
+  int elem_hash = find_hash(index);
+  return table->elems[elem_hash];
 }
 
 void pop_elem(struct node_t *elem, struct hash_table_t *table)

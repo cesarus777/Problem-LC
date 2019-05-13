@@ -16,7 +16,7 @@ int find_hash(int index);
 struct hash_table_t create_hash_table(int capacity);
 
 //find elem in table
-struct node_t *find_elem(struct node_t *elem, struct hash_table_t *table);
+struct node_t *find_elem(int index, struct hash_table_t *table);
 
 //add elem in table
 struct node_t *add_elem(struct node_t *elem, struct hash_table_t *table);
