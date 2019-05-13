@@ -9,6 +9,12 @@ struct page{
 	char data[SYMBOLS_PER_PAGE];
 };
 
+struct ddlst{
+	struct node_t* top;
+	struct node_t* last;
+	int size;
+};
+
 
 struct node_t{
 	struct node_t* next;
@@ -16,9 +22,16 @@ struct node_t{
 	struct page    data; 
 };
 
-struct node_t* insert_after(struct node_t* prev, struct page);
+struct ddlst* create_ddlst();
 
-void delete_node(struct node_t* node);
+void delete_last(struct ddlst* list);
 
-void move_to_top(struct node_t* node);
+struct node_t* getTop(struct ddlst* list);
 
+int get_size(struct ddlst* list);
+
+void push(struct ddlst* list, struct page data);
+
+void move_to_top(struct ddlst* list, struct node_t* node);
+
+void clear_ddlst(struct ddlst* list);
