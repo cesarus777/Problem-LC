@@ -3,7 +3,7 @@
 //hash table
 struct hash_table_t {
   int capacity;
-  struct *page *elem;
+  struct node_t **elem;
 };
 
 //creation hash table
