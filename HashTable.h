@@ -4,7 +4,7 @@
 //hash table
 struct hash_table_t {
   int capacity;
-  struct node_t **elem;
+  struct node_t **elems;
 };
 
 //find hash
